@@ -1,5 +1,4 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { resolve } from 'path';
 import { useForm } from 'react-hook-form';
 import {z} from 'zod';
 import { Form, FormControl, FormField, FormItem } from './ui/form';
@@ -21,7 +20,7 @@ type Props = {
   onSubmit:(formData:SearchForm)=>void;
   placeHolder:string;
   onReset?:()=>void; 
-  searchQuery:string;
+  searchQuery?:string;
 }
 
 const SearchBar = ({onSubmit,onReset,placeHolder,searchQuery}: Props) => {
